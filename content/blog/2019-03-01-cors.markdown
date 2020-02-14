@@ -1,7 +1,0 @@
----
-title: Cross-Origin Resource Sharing What?
-layout: post
-tags: [note]
----
-
-[CORS MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
