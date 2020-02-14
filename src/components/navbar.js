@@ -26,7 +26,9 @@ const Navbar = () => {
     <div className="site-header">
       {/*Logo*/}
       <div className="branding">
-        <Link to={`/`}><img className="avatar" src={icon} alt="icon"/></Link>
+        <Link to={`/`}>
+          <img className="avatar" src={icon} alt="icon" />
+        </Link>
 
         <h1 className="site-title">
           <Link to={`/`}>{title}</Link>

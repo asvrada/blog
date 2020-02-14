@@ -4,14 +4,14 @@ import Footer from "../components/footer";
 
 import "../styles/type-on-strap.scss";
 
-const Index = ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <main>{children}</main>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
 
-export default Index;
+export default Layout;
