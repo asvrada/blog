@@ -1,11 +1,11 @@
 import React from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 
-import { FaSearch, FaTags } from "react-icons/fa";
+import { FaAlignJustify, FaSearch, FaTags } from "react-icons/fa";
 
 import icon from "../images/triangle.svg";
 
-const Navbar = () => {
+const Navbar = ({ showDropdown, setShowDropdown }) => {
   // Query title
   const data = useStaticQuery(
     graphql`
@@ -23,54 +23,56 @@ const Navbar = () => {
   const title = data.site.siteMetadata.title;
 
   return (
-    <div className="site-header">
-      {/*Logo*/}
-      <div className="branding">
-        <Link to={`/`}>
-          <img className="avatar" src={icon} alt="icon" />
-        </Link>
+    <div className="full-container">
+      <div className="flex-row branding-container">
+        {/*Logo*/}
+        <div className="flex-small">
+          <Link className="logo inline-block" to={`/`}>
+            <img className="" src={icon} alt="icon"/>
+          </Link>
 
-        <h1 className="site-title">
-          <Link to={`/`}>{title}</Link>
-        </h1>
+          <Link className="inline-block title" to={`/`}>{title}</Link>
+        </div>
+
+        {/*Menu*/}
+        <nav className="flex-small navbar">
+          <button className="fake-button"
+                  onClick={() => {
+                    setShowDropdown(!showDropdown);
+                  }}>
+            <FaAlignJustify/>
+          </button>
+        </nav>
       </div>
 
-      {/*Menu*/}
-      <nav className="clear">
-        {/*<i className="fa fa-bars fa-lg"></i>*/}
-
-        <ul>
+      <div className={`dropdown-menu` + (showDropdown ? "" : " hide")}>
+        <ul className="">
           {/* About page */}
           <li>
             <Link to={`/about`}>About</Link>
           </li>
-
-          <li className="separator">|</li>
 
           {/* Portfolio page*/}
           <li>
             <Link to={`/portfolio`}>Portfolio</Link>
           </li>
 
-          <li className="separator">|</li>
-
           {/*Search page*/}
           <li>
             <Link to={`/search`}>
-              <FaSearch />
+              <FaSearch/>
             </Link>
           </li>
-
-          <li className="separator">|</li>
 
           {/*tags page*/}
           <li>
             <Link to={`/tags`}>
-              <FaTags />
+              <FaTags/>
             </Link>
           </li>
         </ul>
-      </nav>
+      </div>
+
     </div>
   );
 };

@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: `/blog`,
   siteMetadata: {
-    title: `Jeff's Mindscape`,
+    title: `Mindscape`,
     description: `Site description placeholder`,
     siteUrl: `https://asvrada.github.io/blog/`,
     social: {

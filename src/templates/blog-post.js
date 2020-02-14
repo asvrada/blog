@@ -1,49 +1,47 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 
-import Index from "../layout";
+import Layout from "../layout";
 import SEO from "../components/seo";
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
+  // post node
   const { previous, next } = pageContext;
 
   return (
-    <Index location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+
       <article>
         <header>
           <h1>{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
         </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr />
-        <footer />
+        <section dangerouslySetInnerHTML={{ __html: post.html }}/>
       </article>
 
       <nav>
-        <ul>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
+        <div>
+          {previous && (
+            <Link to={previous.fields.slug} rel="prev">
+              {previous.frontmatter.title}
+            </Link>
+          )}
+        </div>
+        <div>
+          {next && (
+            <Link to={next.fields.slug} rel="next">
+              {next.frontmatter.title}
+            </Link>
+          )}
+        </div>
       </nav>
-    </Index>
+    </Layout>
   );
 };
 

@@ -1,31 +1,29 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 import Layout from "../layout";
 import SEO from "../components/seo";
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title;
+// Home page
+const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout>
-      <SEO title="All posts" />
+      <SEO title="All posts"/>
+
+      <ul>
       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug;
+        const title = node.frontmatter.title;
         return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3>
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-          </article>
+          <li key={node.fields.slug}>
+            <Link to={node.fields.slug}>
+              {title}
+            </Link>
+          </li>
         );
       })}
+      </ul>
     </Layout>
   );
 };
@@ -34,15 +32,9 @@ export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }

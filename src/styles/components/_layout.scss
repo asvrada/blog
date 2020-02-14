@@ -1,0 +1,82 @@
+/**
+ * Layout
+ */
+
+// Custom styles
+.full-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  .branding-container {
+    //Debug
+    background-color: #29de7d;
+
+    padding: 0.5rem;
+
+    .logo {
+      margin-left: 0.4rem;
+
+      img {
+        // Adjust position to align with button
+        position: relative;
+        top: 0.3rem;
+        height: 2rem;
+      }
+    }
+
+    .title {
+      // Adjust position to align with button
+      position: relative;
+      bottom: 0.2rem;
+
+      margin-left: 0.5rem;
+      font-size: 1.5rem;
+
+      text-decoration: none;
+      color: $font-color;
+    }
+
+    .navbar {
+      .fake-button {
+        margin: 0;
+        border: 0;
+        padding: 0.5rem 1rem;
+
+        background-color: transparent;
+        color: black;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    // debug
+    background-color: gray;
+
+    ul {
+      list-style-type: none;
+
+      margin: 0;
+      padding: 0.5rem 1rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+}
+
+.main-body-margin-menu {
+  margin-top: 9.5rem;
+}
+
+.main-body-margin-no-menu {
+  margin-top: 2.5rem;
+}
+
+.main-body {
+  padding: 1rem;
+}
