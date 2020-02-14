@@ -1,0 +1,77 @@
+---
+title: (Course Note) c02 modeling revised
+layout: post
+tags: [note]
+---
+
+> All work based on this [tutorial](https://www.youtube.com/watch?v=dwoq53Bjb3Y)
+
+# Showcase (revised)
+![Imgur](https://i.imgur.com/qBKUVq0.png)
+
+This is a rim from a random car.
+
+> Download: [Google Drive](https://drive.google.com/open?id=1Glgb3jwA-e0e1ytGwPKo04jK-uzGTrmJ)
+
+## More renders
+
+![Imgur](https://i.imgur.com/BwXGBZm.png)
+
+![Imgur](https://i.imgur.com/IolVYSh.png)
+
+## Things learned during revise
+
+The main problem of my previous render is that, it's way under complete. The model floats in the middle of air, the size of the building is way off, and the placement of models is almost random, as pointed out by some reviewers. So in this revised version, I tried to correct some of these problems.
+
+## How I revised it
+
+First, I added more details to the model, to make it look more completed.
+
+Then I added a HDR image as background, instead of using a cylinder covering the whole scene. The background image is called a HDR image, its a real world 360 photo and can provide real day light environment.
+
+And during this process I learned how to tweak the parameters of the camera, like focus length, Depth of Field and Denoising, to create a better render.
+
+# How
+
+To model this, one can observe that the final product is highly symmetrical, so it's possible to model only a tiny part of it, then use modifiers to copy/paste the rest out of it.
+
+## Step 1
+
+![Imgur](https://i.imgur.com/rZ4sTh0.png)
+
+Modeled this part out of primitive circle shape, using techniques like extrude, shear(in edit mode, activate by pressing `shift+control+option+s`), and bridge (select 4 vertices and press `F`).
+
+Here is a list of useful techniques (all in edit mode):
+
+* Extrude `E`
+* Move along edge `double tap G`
+* Create edge loop `crtl + R`
+* Move with baseline `press E then F`
+* Move with increments `hold down Ctrl when Move/Rotate/Scale`
+* Bridge `F`
+
+## Step 2
+
+![Imgur](https://i.imgur.com/z33fcJ3.png)
+
+Added mirror modifier to get above result.
+
+## Step 3
+
+![Imgur](https://i.imgur.com/7KTFR29.png)
+
+Added array modifier to get the rest 4 parts.
+
+## Step 4
+
+![Imgur](https://i.imgur.com/P96n1dm.png)
+
+Added edge loops/bevel modifier/subsurface division to create the final smooth result.
+
+## Some other techniques learned
+
+![Imgur](https://i.imgur.com/Ws95Fu6.png)
+
+One can toggle the `Matcap` option under the shading section of the panel toggled by pressing `N`. This option gives the model a nice looking material (below), which looks really cool. But keep in mind this material is only available in viewport, it will not appear in the final render.
+
+![Imgur](https://i.imgur.com/WNEO5Xd.png)

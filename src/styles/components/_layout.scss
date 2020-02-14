@@ -4,6 +4,7 @@
 
 // Custom styles
 .full-container {
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
@@ -53,10 +54,12 @@
   }
 
   .dropdown-menu {
-    // debug
-    background-color: gray;
+    position: absolute;
+    right: 1rem;
+    width: 6rem;
 
     ul {
+      background-color: $accent-color;
       list-style-type: none;
 
       margin: 0;
@@ -69,14 +72,7 @@
   }
 }
 
-.main-body-margin-menu {
-  margin-top: 9.5rem;
-}
-
-.main-body-margin-no-menu {
-  margin-top: 2.5rem;
-}
-
 .main-body {
+  margin-top: 4rem;
   padding: 1rem;
 }
