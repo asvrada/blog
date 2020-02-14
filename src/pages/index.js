@@ -10,19 +10,17 @@ const BlogIndex = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="All posts"/>
+      <SEO title="All posts" />
 
       <ul>
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title;
-        return (
-          <li key={node.fields.slug}>
-            <Link to={node.fields.slug}>
-              {title}
-            </Link>
-          </li>
-        );
-      })}
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title;
+          return (
+            <li key={node.fields.slug}>
+              <Link to={node.fields.slug}>{title}</Link>
+            </li>
+          );
+        })}
       </ul>
     </Layout>
   );

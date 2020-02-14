@@ -28,19 +28,23 @@ const Navbar = ({ showDropdown, setShowDropdown }) => {
         {/*Logo*/}
         <div className="flex-small">
           <Link className="logo inline-block" to={`/`}>
-            <img className="" src={icon} alt="icon"/>
+            <img className="" src={icon} alt="icon" />
           </Link>
 
-          <Link className="inline-block title" to={`/`}>{title}</Link>
+          <Link className="inline-block title" to={`/`}>
+            {title}
+          </Link>
         </div>
 
         {/*Menu*/}
         <nav className="flex-small navbar">
-          <button className="fake-button"
-                  onClick={() => {
-                    setShowDropdown(!showDropdown);
-                  }}>
-            <FaAlignJustify/>
+          <button
+            className="fake-button"
+            onClick={() => {
+              setShowDropdown(!showDropdown);
+            }}
+          >
+            <FaAlignJustify />
           </button>
         </nav>
       </div>
@@ -60,19 +64,18 @@ const Navbar = ({ showDropdown, setShowDropdown }) => {
           {/*Search page*/}
           <li>
             <Link to={`/search`}>
-              <FaSearch/>
+              <FaSearch />
             </Link>
           </li>
 
           {/*tags page*/}
           <li>
             <Link to={`/tags`}>
-              <FaTags/>
+              <FaTags />
             </Link>
           </li>
         </ul>
       </div>
-
     </div>
   );
 };
