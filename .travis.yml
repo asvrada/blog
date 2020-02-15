@@ -8,8 +8,8 @@ script: yarn run build
 
 deploy:
   provider: pages
-  skip_cleanup: false
+  skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: public
   on:
-    branch: gh-pages
+    branch: master
