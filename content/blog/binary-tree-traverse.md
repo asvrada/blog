@@ -44,7 +44,7 @@ class Solution(object):
 # 前序遍历 preorder
 遍历顺序：访问当前节点，接着访问左右节点。
 
-![Imgur](preorder.png)
+![Imgur](../assets/images/binary-tree-traverse/preorder.png)
 
 ```python
 class Solution:
@@ -76,7 +76,7 @@ class Solution:
 # 中序遍历 inorder
 遍历顺序：访问所有左节点后才访问当前节点，最后是右节点。
 
-![Imgur](inorder.png)
+![Imgur](../assets/images/binary-tree-traverse/inorder.png)
 
 ```python
 class Solution(object):
@@ -102,7 +102,7 @@ class Solution(object):
 
 # 后序遍历 postorder
 遍历顺序：访问所有左右节点后才访问当前节点。
-![Imgur](postorder.png)
+![Imgur](../assets/images/binary-tree-traverse/postorder.png)
 
 ```python
 class Solution(object):

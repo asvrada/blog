@@ -5,12 +5,12 @@ title: 用脚本批量删除QQ空间的说说
 
 以下我使用Chrome浏览器进行演示。代码可能仅兼容该浏览器。进行操作的页面为*QQ空间 > 个人中心 > 说说*。
 
-![Imgur](1.png)
+![Imgur](../assets/images/delete-qzone-feed/1.png)
 
 ## 1. 了解大致流程
 首先需要知道人工删除一条说说该怎么做。人工的话操作起来很简单，说说下方有删除按钮，点击后会出现确认对话框，点击确认即可。
 
-![Imgur](2.png)
+![Imgur](../assets/images/delete-qzone-feed/2.png)
 
 接下来，观察QQ空间的网页结构来看如何用代码进行以上操作。
 

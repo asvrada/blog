@@ -9,8 +9,8 @@ In short, you can't with stock Premiere without plugin. I am using this plugin:
 
 Before:
 
-![Imgur](before.jpg)
+![Imgur](../assets/images/pr-add-motion-blur/before.jpg)
 
 After:
 
-![Imgur](after.jpg)
+![Imgur](../assets/images/pr-add-motion-blur/after.jpg)

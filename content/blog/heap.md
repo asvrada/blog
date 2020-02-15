@@ -26,7 +26,7 @@ Following are codes for a Min Heap, where the parent is smaller than its childre
 
 Note when visualize the shift up / down operations, you should imagine a tree where its root is at the bottom, like a real tree, rather than more common one like shown above.
 
-![img](1.png)
+![img](../assets/images/heap/1.png)
 _Blue subscript is the index_
 
 > Below codes from Python's implementation of heap:  

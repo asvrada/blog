@@ -13,7 +13,7 @@ title: JPEG图像压缩过程
 > 比较常见的无损压缩格式是PNG
 
 # 压缩流程总览
-![Imgur](workflow.png)
+![Imgur](../assets/images/jpeg-compression/workflow.png)
 
 可以看到流程分为以下几步 
 
@@ -30,7 +30,7 @@ title: JPEG图像压缩过程
 
 我们都知道，计算机显示的图像一般是由RGB三色表示，简单明了。但是为了提升压缩率，我们在压缩前，事先将RGB颜色转换到YCbCr颜色空间。
 
-![RGB to YCbCr](steps.png)
+![RGB to YCbCr](../assets/images/jpeg-compression/steps.png)
 
 RGB 转换到 Y Cb Cr 空间后，Y代表luma（亮度），Cb Cr分表代表两种色彩的浓度。由于相比色彩浓度，人眼对亮度的变化更为敏感，我们可以对Cb Cr空间的颜色信息进行适当的丢弃，提高压缩率。
 
@@ -40,7 +40,7 @@ RGB 转换到 Y Cb Cr 空间后，Y代表luma（亮度），Cb Cr分表代表两
 
 常见选项为4:2:0，经过这一步后原来需要8个数字表示的信息，现在只需要2个，直接抛弃了75%的Cb Cr信息。
 
-![Imgur](422.png)
+![Imgur](../assets/images/jpeg-compression/422.png)
 
 ## 3. 分块
 
@@ -96,19 +96,19 @@ DCT 变换后，虽然矩阵大小不变，但每个元素的意义已经不一�
 
 下面举一个例子，来展示实际应用中DCT加上量化的作用：
 
-![Imgur](dct.png)
+![Imgur](../assets/images/jpeg-compression/dct.png)
 
-![Imgur](quanti.png)
+![Imgur](../assets/images/jpeg-compression/quanti.png)
 
 可以看到量化后，大量的元素现在变成了0，极大的压缩了原本的信息。
 
 再来看看压缩后恢复的数据是什么样的，通过做上述步骤的拟变换，我们得到了：
 
-![Imgur](before.png)
+![Imgur](../assets/images/jpeg-compression/before.png)
 
 一堆数字而已，看不出来什么，让我们观察一下转换前后数据的差值：
 
-![Imgur](after.png)
+![Imgur](../assets/images/jpeg-compression/after.png)
 
 可以发现，转换前后误差最大也不过6%。
 
@@ -120,7 +120,7 @@ DCT 变换后，虽然矩阵大小不变，但每个元素的意义已经不一�
 
 这一步将2D矩阵通过如下图所示的Z字形扫描转换为1D数组。由于DCT+量化后，高频部分（即矩阵右下部分）的数值通常比较相似，或者干脆是大片的0，因此经过zigzag转换能将这一片数值相近的数字集中起来，方便下一步的压缩。
 
-![](zig.png)
+![](../assets/images/jpeg-compression/zig.png)
 
 *Zigzag ordering*
 

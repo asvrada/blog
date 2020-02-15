@@ -3,7 +3,7 @@ date: '2020-02-13'
 title: Notes on some Basic Japanese
 ---
 
-![](1.jpg)
+![](../assets/images/1.jpg)
 
 | Japanese | English  | Example     |
 |----------|----------|-------------|
