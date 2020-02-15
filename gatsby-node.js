@@ -1,6 +1,7 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+// Create new page for each node (query result)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
@@ -50,6 +51,7 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 };
 
+// When creating node for each file, add slug to it
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
