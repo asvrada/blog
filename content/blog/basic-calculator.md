@@ -3,7 +3,6 @@ date: '2020-02-27'
 title: Infix to Postfix, a general approach to Basic Calculator problem set
 ---
 
-Following are a series of questions on LeetCode that require user to write a simply calculator to compute equations like "1+1" and "1x(3-6)/3".
 
 | [Basic Calculator](https://leetcode.com/problems/basic-calculator/)  | [Solution](https://leetcode.com/problems/basic-calculator/discuss/414898/Infix-to-Postfix-a-general-approach-to-similar-questions)  |
 |---|---|
@@ -12,10 +11,13 @@ Following are a series of questions on LeetCode that require user to write a sim
 
 > Following is a copy & paste from above link.
 
+Above are a series of questions on LeetCode that require user to write a simple calculator to compute equations like `1+1` and `1x(3-6)/3`.
+
 These questions all ask we to evaluate a infix expression with simple math operators in it.
 
-Whats infix? For infix expression(the one we use daily) binary operators appear between two operand. And for postfix, operator appears after operand, even for unary operand.
+Whats infix? For infix expression(the one we use daily) binary operators appear between two operands. And for postfix, operator appears after operand, even for unary operand.
 
+The same expression represented in two forms:  
 Infix:  
 `1 - (2 + 3)`
 
