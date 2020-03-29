@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `blog`,
+  pathPrefix: `/blog`,
   siteMetadata: {
     title: `Mindscape`,
     description: `Site description placeholder`,
@@ -54,7 +54,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-114654492-1`,
       },
     },
     `gatsby-plugin-feed`,
