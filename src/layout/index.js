@@ -9,9 +9,11 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <Navbar showDropdown={showDropdown} setShowDropdown={setShowDropdown} />
-      <main className={`main-body`}>{children}</main>
-      <Footer />
+      <Navbar showDropdown={showDropdown} setShowDropdown={setShowDropdown}/>
+
+      <main className={`main-body container`}>{children}</main>
+
+      <Footer/>
     </div>
   );
 };
