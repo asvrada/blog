@@ -14,8 +14,7 @@ In terms of the implementation of heap, generally we use a complete binary tree 
 
 _Binary Max Heap and how we store it in an array_
 
-![Binary Heap](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Max-Heap.svg/2560px-Max-Heap.svg.png)
-
+![max heap](../assets/images/heap/max-heap.png)
 `heap = [100, 19, 36, 17, 3, 25, 1, 2, 7]`
 
 # Operations on heap
