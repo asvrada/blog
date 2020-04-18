@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
     <div>
       <Navbar showDropdown={showDropdown} setShowDropdown={setShowDropdown}/>
 
-      <main className={`main-body container`}>{children}</main>
+      <main className={`container`}>{children}</main>
 
       <Footer/>
     </div>
