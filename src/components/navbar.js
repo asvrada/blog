@@ -37,16 +37,16 @@ const Navbar = ({ showDropdown, setShowDropdown }) => {
         </div>
 
         {/*Menu*/}
-        <nav className="flex-small navbar">
-          <button
-            className="fake-button"
-            onClick={() => {
-              setShowDropdown(!showDropdown);
-            }}
-          >
-            <FaAlignJustify />
-          </button>
-        </nav>
+        {/*<nav className="flex-small navbar">*/}
+        {/*  <button*/}
+        {/*    className="fake-button"*/}
+        {/*    onClick={() => {*/}
+        {/*      setShowDropdown(!showDropdown);*/}
+        {/*    }}*/}
+        {/*  >*/}
+        {/*    <FaAlignJustify />*/}
+        {/*  </button>*/}
+        {/*</nav>*/}
       </div>
 
       <div className={`dropdown-menu` + (showDropdown ? "" : " hide")}>
