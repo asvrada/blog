@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
+import SiteNavbar from "../components/sitenavbar";
+
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 import "../styles/main.scss";
 
@@ -8,13 +11,19 @@ const Layout = ({ children }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   return (
-    <div>
-      <Navbar showDropdown={showDropdown} setShowDropdown={setShowDropdown}/>
+    <Container fluid>
+      <Row>
+        <SiteNavbar showDropdown={showDropdown}
+                    setShowDropdown={setShowDropdown}/>
+      </Row>
 
-      <main className={`container`}>{children}</main>
-
+      <Row>
+        <Col>
+          <main>{children}</main>
+        </Col>
+      </Row>
       {/*<Footer/>*/}
-    </div>
+    </Container>
   );
 };
 
