@@ -4,11 +4,9 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
-import { FaAlignJustify, FaSearch, FaTags } from "react-icons/fa";
-
 import icon from "../images/triangle.svg";
 
-const SiteNavbar = ({ showDropdown, setShowDropdown }) => {
+const SiteNavbar = () => {
   // Query title
   const data = useStaticQuery(
     graphql`
@@ -26,22 +24,18 @@ const SiteNavbar = ({ showDropdown, setShowDropdown }) => {
   const title = data.site.siteMetadata.title;
 
   return (
-    <Navbar id="navbar" bg="light" expand="sm">
-      <Link to="/">
-        <Navbar.Brand href="">
-          <img className="icon" src={icon} alt="Icon for blog"/>
-          <span className="ml-2 h3 align-middle">{title}</span>
-        </Navbar.Brand>
-      </Link>
+    <Navbar id="navbar" bg="light">
+      <Navbar.Brand as={Link} to="/">
+        <img className="icon" src={icon} alt="Icon for blog"/>
+        {/* Hide only on sm */}
+        <span className="ml-2 h4 align-middle d-none d-sm-inline">{title}</span>
+      </Navbar.Brand>
 
-      <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link as={Link} href="/">
-            Home
-          </Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
+      <Nav className="ml-auto">
+        <Nav.Link as={Link} to="/about">
+          About
+        </Nav.Link>
+      </Nav>
     </Navbar>
   );
 };

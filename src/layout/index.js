@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import SiteNavbar from "../components/sitenavbar";
 
 import Container from "react-bootstrap/Container";
@@ -8,22 +8,19 @@ import Col from "react-bootstrap/Col";
 import "../styles/main.scss";
 
 const Layout = ({ children }) => {
-  const [showDropdown, setShowDropdown] = useState(false);
-
   return (
-    <Container fluid>
-      <Row>
-        <SiteNavbar showDropdown={showDropdown}
-                    setShowDropdown={setShowDropdown}/>
-      </Row>
+    <>
+      <SiteNavbar/>
 
-      <Row>
-        <Col>
-          <main>{children}</main>
-        </Col>
-      </Row>
-      {/*<Footer/>*/}
-    </Container>
+      <Container>
+        <Row>
+          <Col>
+            <main className="mt-3" id="main">{children}</main>
+          </Col>
+        </Row>
+        {/*<Footer/>*/}
+      </Container>
+    </>
   );
 };
 

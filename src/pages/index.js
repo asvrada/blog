@@ -10,7 +10,7 @@ const BlogIndex = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="All posts" />
+      <SEO title="All posts"/>
 
       <ul>
         {posts.map(({ node }) => {
