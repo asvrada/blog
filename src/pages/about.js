@@ -6,7 +6,6 @@ import SEO from "../components/seo";
 
 // Home page
 const BlogAbout = ({ data }) => {
-  const siteTitle = data.site.siteMetadata.title;
 
   return (
     <Layout>

@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
       <Container>
         <Row>
           <Col>
-            <main className="mt-3" id="main">{children}</main>
+            <main className="mt-3 mb-3" id="main">{children}</main>
           </Col>
         </Row>
         {/*<Footer/>*/}

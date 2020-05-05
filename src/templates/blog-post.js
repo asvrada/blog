@@ -1,17 +1,12 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../layout";
 import SEO from "../components/seo";
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
   const siteTitle = data.site.siteMetadata.title;
-  // post node
-  // previous: 更老的文章
-  // next: 更新的文章
-  // todo:
-  const { previous, next } = pageContext;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -24,29 +19,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }}/>
       </article>
-
-      {/*<nav>*/}
-      {/*  <div>*/}
-      {/*    {previous && (*/}
-      {/*      <div>*/}
-      {/*        <span>上一篇</span>*/}
-      {/*        <Link to={previous.fields.slug} rel="prev">*/}
-      {/*          {previous.frontmatter.title}*/}
-      {/*        </Link>*/}
-      {/*      </div>*/}
-      {/*    )}*/}
-      {/*  </div>*/}
-      {/*  <div>*/}
-      {/*    {next && (*/}
-      {/*      <div>*/}
-      {/*        <span>下一篇</span>*/}
-      {/*        <Link to={next.fields.slug} rel="next">*/}
-      {/*          {next.frontmatter.title}*/}
-      {/*        </Link>*/}
-      {/*      </div>*/}
-      {/*    )}*/}
-      {/*  </div>*/}
-      {/*</nav>*/}
     </Layout>
   );
 };
