@@ -33,7 +33,8 @@
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
-    "react-icons": "^3.9.0"
+    "react-icons": "^3.9.0",
+    "react-iframe": "^1.8.0"
   },
   "devDependencies": {
     "prettier": "^2.0.5"
