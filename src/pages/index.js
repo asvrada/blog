@@ -21,7 +21,7 @@ const BlogIndex = ({ data }) => {
           return (
             <ListGroup.Item action key={node.fields.slug}
                             as={Link} to={node.fields.slug}>
-              <Row className="d-flex justify-content-between">
+              <Row className="d-flex justify-content-between align-items-center">
                 <strong className="m-0">{title}</strong>
                 <small className="m-0">{date}</small>
               </Row>
