@@ -6,10 +6,9 @@ import SEO from "../components/seo";
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
-  const siteTitle = data.site.siteMetadata.title;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt}/>
 
       <article>
