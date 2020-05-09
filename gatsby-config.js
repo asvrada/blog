@@ -57,7 +57,6 @@ module.exports = {
         trackingId: `UA-114654492-1`,
       },
     },
-    `gatsby-plugin-feed`,
     `gatsby-plugin-react-helmet`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
