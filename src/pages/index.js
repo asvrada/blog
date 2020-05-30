@@ -4,7 +4,6 @@ import { graphql, Link } from "gatsby";
 import Layout from "../layout";
 import SEO from "../components/seo";
 import ListGroup from "react-bootstrap/ListGroup";
-import Row from "react-bootstrap/Row";
 
 // Home page
 const BlogIndex = ({ data }) => {
@@ -21,10 +20,12 @@ const BlogIndex = ({ data }) => {
           return (
             <ListGroup.Item action key={node.fields.slug}
                             as={Link} to={node.fields.slug}>
-              <Row className="d-flex justify-content-between align-items-center">
+              <div>
                 <strong className="m-0">{title}</strong>
+              </div>
+              <div>
                 <small className="m-0">{date}</small>
-              </Row>
+              </div>
             </ListGroup.Item>
           );
         })}
