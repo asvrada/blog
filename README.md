@@ -3,7 +3,7 @@
 My personal blog
 
 ## Todo
-1. CSS / Design
-2. Main page layout redesign
-    1. Most recent
-    1. Group by category
+1. Main page layout redesign
+2. Tag support
+3. Comment section
+4. Site-wide Search
