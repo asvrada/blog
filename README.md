@@ -1,5 +1,7 @@
 # Blog
 
+[![Build Status](https://travis-ci.com/asvrada/blog.svg?branch=master)](https://travis-ci.com/asvrada/blog)
+
 My personal blog
 
 ## Todo
