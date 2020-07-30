@@ -3,7 +3,7 @@ date: '2020-07-29'
 title: Use JWT with Django RESTful and GraphQL
 ---
 
-> Summary: I integrated JWT auth to my Django application that uses RESTful and GraphQL
+> Summary: I integrated JWT auth to my Django application that uses RESTful and GraphQL  
 > You can check the repo here: https://github.com/asvrada/home-dashboard-backend
 
 ## The Goal / Expected outcome
@@ -50,7 +50,7 @@ I will skip the usual Django application creation/setup step since there is plen
 
 The first step is to create a custom Django authentication backend. A Django authentication backend will try to find the correct user given the request, like username and password, however, in this case it will take the JWT in the header and try to authenticate the user.
 
-> How to write custom authentication
+> How to write custom authentication  
 > https://docs.djangoproject.com/en/3.0/topics/auth/customizing/#specifying-authentication-backends
 
 ```python
