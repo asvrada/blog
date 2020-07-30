@@ -174,6 +174,4 @@ class IconType(DjangoObjectType):
         if not info.context.user.is_authenticated:
             raise exceptions.PermissionDeniedException(exceptions.MESSAGE_PERMISSION_DENIED)
         return queryset.filter(user=info.context.user)
-
-
 ```
