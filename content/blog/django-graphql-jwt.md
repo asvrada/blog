@@ -158,3 +158,22 @@ urlpatterns += [
 We add an authentication backend that tries to validate the JWT in an incoming request, then we add a middleware layer to call this backend to try to authenticate each request.
 
 This JWT authenticate is application-wide since we add it to the MIDDLEWARE setting. You could reduce the scope by individually adding the middleware to RESTful framework's setting and to GraphQL's setting.
+
+Please note JWT authentication is not enforced, which means if the request does not contain a valid token, then there will not be any error/exception thrown. However you can easily enforce authentication by adding `DEFAULT_PERMISSION_CLASSES` to rest framework and for GraphQL... You can do things like following:
+
+```python
+class IconType(DjangoObjectType):
+    class Meta:
+        model = models.Icon
+        fields = "__all__"
+        filter_fields = fields
+        interfaces = (relay.Node,)
+
+    @classmethod
+    def get_queryset(cls, queryset, info):
+        if not info.context.user.is_authenticated:
+            raise exceptions.PermissionDeniedException(exceptions.MESSAGE_PERMISSION_DENIED)
+        return queryset.filter(user=info.context.user)
+
+
+```
