@@ -60,6 +60,6 @@ git stash drop     Discard the most recent stack
 
 todo
 
-## rebase
+## remote/fetch
 
 todo

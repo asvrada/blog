@@ -39,7 +39,7 @@ git commit
 如果需要在不同的branch间同步commit，可以使用rebase或者merge。
 
 ### rebase
-这个我用的比较少，一般用来把自己的branch rebase到最新的master上。
+一般用来把自己的branch rebase到最新的master上。
 
 `git rebase {other}` 用于把当前 branch 所做的 commit 移到 other 这个 branch 上。说是移动，其实是replay提交记录，重新应用变动，因此其实是不同的commit，hash是不一样的。
 
@@ -47,7 +47,7 @@ git commit
 `git merge {other}` 用于把 other 这个 branch 上的新 commit 同步到当前 branch 上。
 
 ## pull request
-这个应该问题不大。有conflict就修改修改。
+有conflict就修改。
 
 ## 完成开发，删除branch
 确认pull request已接受，branch 合并到 master，该分支所做变更已经彻底提交后，可以先删除remote branch:
