@@ -58,8 +58,12 @@ git stash drop     Discard the most recent stack
 
 ## squash before merge
 
-todo
+![git merge squash](../assets/images/work-with-git/git_merge_squash.jpg)
 
-## remote/fetch
+> https://stackoverflow.com/questions/5308816/how-to-use-git-merge-squash
 
-todo
+```
+git checkout main
+git merge --squash feature_branch
+git commit
+```
