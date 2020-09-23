@@ -11,7 +11,7 @@ const BlogPostTemplate = ({ data, location }) => {
     <Layout>
       <SEO title={post.frontmatter.title} description={post.excerpt}/>
 
-      <article>
+      <article className="markdown-body">
         <header>
           <h1>{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
