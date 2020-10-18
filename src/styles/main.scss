@@ -20,20 +20,28 @@
   border: none;
 }
 
+.index-post-date {
+  flex: 0 0 100px !important;
+}
+
+.index-post-category {
+  flex: 0 0 50px;
+}
+
 .link-view-all {
   font-size: 1.5rem;
+}
+
+.post-category {
+  text-transform: uppercase;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .post-header {
   border-bottom: 1px solid #eaecef;
   margin-bottom: 16px;
-
-  .post-category {
-    background-color: #7ed8e8;
-    text-transform: uppercase;
-    padding: 5px;
-    border-radius: 5px;
-  }
 
   .post-date {
     margin-bottom: 8px;

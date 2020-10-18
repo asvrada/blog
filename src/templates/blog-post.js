@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 
 import Layout from "../layout";
 import SEO from "../components/seo";
+import PostCategory from "../components/PostCategory";
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark;
@@ -15,7 +16,7 @@ const BlogPostTemplate = ({ data, location }) => {
 
       <article className="markdown-body">
         <header className="post-header">
-          <span className="post-category">{postCategory}</span>
+          <PostCategory category={postCategory}/>
           <h1 className="post-title">{post.frontmatter.title}</h1>
           <p className="post-date"><span role="img" aria-label="calendar icon">📅</span> {post.frontmatter.date}</p>
         </header>

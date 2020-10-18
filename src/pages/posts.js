@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../layout";
 import SEO from "../components/seo";
 import ListGroup from "react-bootstrap/ListGroup";
+import PostSingleRow from "../components/PostSingleRow";
 
 // Shows all posts
 const Posts = ({ data }) => {
@@ -18,17 +19,11 @@ const Posts = ({ data }) => {
         <ListGroup variant="flush">
           {posts.map(({ node }) => {
             const postSlug = node.fields.slug;
-            const postDate = node.frontmatter.date;
-            const postTitle = node.frontmatter.title;
+
             return (
               <ListGroup.Item action key={postSlug}
                               as={Link} to={postSlug}>
-                <div>
-                  <strong className="m-0">{postTitle}</strong>
-                </div>
-                <div>
-                  <small className="m-0">{postDate}</small>
-                </div>
+                <PostSingleRow frontmatter={node.frontmatter}/>
               </ListGroup.Item>
             );
           })}
@@ -50,7 +45,8 @@ export const pageQuery = graphql`
           }
           frontmatter {
             date(formatString: "MMM DD, YYYY")
-            title
+            title,
+            category
           }
         }
       }
