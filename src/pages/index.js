@@ -15,16 +15,17 @@ const BlogIndex = ({ data }) => {
 
       <ListGroup variant="flush">
         {posts.map(({ node }) => {
-          const date = node.frontmatter.date;
-          const title = node.frontmatter.title;
+          const postSlug = node.fields.slug;
+          const postDate = node.frontmatter.date;
+          const postTitle = node.frontmatter.title;
           return (
-            <ListGroup.Item action key={node.fields.slug}
-                            as={Link} to={node.fields.slug}>
+            <ListGroup.Item action key={postSlug}
+                            as={Link} to={postSlug}>
               <div>
-                <strong className="m-0">{title}</strong>
+                <strong className="m-0">{postTitle}</strong>
               </div>
               <div>
-                <small className="m-0">{date}</small>
+                <small className="m-0">{postDate}</small>
               </div>
             </ListGroup.Item>
           );
