@@ -1,6 +1,7 @@
 ---
 date: '2019-07-18'
 title: CentOS 上安装 Vim 8
+category: note
 ---
 
 > 来源：[简书](https://www.jianshu.com/p/86298c721111)

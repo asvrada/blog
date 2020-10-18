@@ -1,6 +1,7 @@
 ---
 date: '2019-01-25'
 title: About Python truth value test
+category: code
 ---
 
 If you are using Python, you probably will write something like this to check if a list is empty:

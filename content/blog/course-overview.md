@@ -1,6 +1,7 @@
 ---
 date: '2019-01-20'
 title: 本学期各课程评价
+category: life
 ---
 
 本学期课程安排：[2019 Spring](http://registrar-prod.unet.brandeis.edu/registrar/schedule/classes/2019/Spring/1400/GRAD)

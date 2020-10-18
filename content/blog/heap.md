@@ -1,6 +1,7 @@
 ---
 date: '2019-09-16'
 title: Heap
+category: code
 ---
 
 # Introduction

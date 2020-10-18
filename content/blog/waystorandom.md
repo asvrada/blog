@@ -1,20 +1,21 @@
 ---
 date: '2018-07-01'
 title: 随机在数组中取k项的几种做法
+category: code
 ---
 
 最近在做网页版扫雷小游戏，遇到一个要求是，从一个大小为n的雷区中随机选取k个不重复的方块，用来放置地雷。看似是一个很简单的问题，但是我在写的时候发现有不少思路不同的实现，决定记一下最好的方法，以便日后查看。
 
 先贴上我最终的代码：
 
-```javascript
+```js
 /**
  * 大致思路：乱序排列一个数组，并取前k个作为地雷
  * todo: make this for-free
  */
-generateMines() {
-    // 这个是所有地雷位置（用数字表示）的集合
-    const setMines = this.setMines;
+function generateMines() {
+    // 所有地雷位置（用数字表示）
+    let mines = [];
 
     // 初始化一个1到n的数组
     let arr = [];
@@ -25,8 +26,8 @@ generateMines() {
     shuffle(arr);
 
     // 将乱序数组的前k个元素当作地雷的位置，放入集合
-    for (let lop = 0; lop < this.numMines; lop++) {
-        setMines.add(arr[lop]);
+    for (let lop = 0; lop < numberMines; lop++) {
+        mines.push(arr[lop]);
     }
 }
 ```

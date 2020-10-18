@@ -1,6 +1,7 @@
 ---
 date: '2019-10-24'
 title: How to shuffle an array
+category: code
 ---
 
 [https://en.wikipedia.org/wiki/Fisher–Yates_shuffle](https://en.wikipedia.org/wiki/Fisher–Yates_shuffle)

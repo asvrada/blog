@@ -1,9 +1,7 @@
 ---
 date: '2018-02-23'
-feature-img: assets/img/blogs/banner.jpg
-layout: post
-thumbnail: assets/img/blogs/banner.jpg
 title: Hello World
+category: life
 ---
 
 ### Hello World!

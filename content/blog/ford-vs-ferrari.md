@@ -1,6 +1,7 @@
 ---
 date: '2019-11-15'
 title: Ford vs Ferrari
+category: life
 ---
 
 刚看完《福特vs法拉利》，刚下电影院座位，谢邀。

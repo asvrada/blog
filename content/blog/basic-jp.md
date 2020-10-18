@@ -1,6 +1,7 @@
 ---
 date: '2020-02-13'
 title: Notes on some Basic Japanese
+category: note
 ---
 
 ![](../assets/images/1.jpg)

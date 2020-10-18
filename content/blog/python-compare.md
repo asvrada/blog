@@ -1,6 +1,7 @@
 ---
 date: '2019-12-08'
 title: Python what is id, hash, ==, != for custom classes
+category: code
 ---
 
 What is `id, hash, ==, !=` in Python and how to use them.

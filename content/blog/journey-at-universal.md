@@ -1,6 +1,7 @@
 ---
 date: '2019-01-07'
 title: 环球影城过山车评价
+category: life
 ---
 
 过去两天游玩了佛罗里达环球影城的两个园区：主区 Universial Studios Florida 和冒险岛 Island of Adventrue。即使没买快速票也顺利的玩完了所有大型的过山车项目，在此总结分享一下。

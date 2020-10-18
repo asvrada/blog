@@ -1,6 +1,7 @@
 ---
 date: '2019-07-24'
 title: 工作中使用git的一点心得
+category: note
 ---
 
 > 推荐 git 互动式教程：[learn git branching](https://learngitbranching.js.org)

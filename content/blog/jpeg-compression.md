@@ -1,7 +1,7 @@
 ---
 date: '2018-11-13'
-layout: post
 title: JPEG图像压缩过程
+category: code
 ---
 
 某大作业要求写一个图像压缩/解压缩的软件，因此在此梳理一下过程。

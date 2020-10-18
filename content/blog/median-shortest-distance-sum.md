@@ -1,6 +1,7 @@
 ---
 date: '2019-10-05'
 title: Illustration - why median gives shortest sum of distance?
+category: note
 ---
 
 So while LeetCoding, I encountered problems like [296. Best Meeting Point](https://leetcode.com/problems/best-meeting-point/) where you use the fact that median gives you the shortest sum of distance from other nodes to it. And I am going to show your why, without boring math equations.

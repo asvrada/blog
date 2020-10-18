@@ -1,6 +1,7 @@
 ---
 date: '2020-04-04'
 title: My note on GraphQL
+category: note
 ---
 
 > https://graphql.org/learn/

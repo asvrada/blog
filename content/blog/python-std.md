@@ -1,6 +1,7 @@
 ---
 date: '2018-12-10'
 title: How to integrate Linux pipe in your Python program
+category: code
 ---
 
 ## What is Linux pipe

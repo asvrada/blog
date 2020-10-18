@@ -1,6 +1,7 @@
 ---
 date: '2019-08-10'
 title: Add motion blur to video in Premiere
+category: note
 ---
 
 In short, you can't with stock Premiere without plugin. I am using this plugin:

@@ -1,6 +1,7 @@
 ---
 date: '2018-09-16'
 title: serialize and deserialize tree
+category: code
 ---
 
 [LeetCode](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/)

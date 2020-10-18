@@ -1,6 +1,7 @@
 ---
 date: '2019-10-24'
 title: Reorder array given index
+category: code
 ---
 
 Encountered a situation where I have to re-order an array given the new index of its elements. Can't come up with a O(n) solution until I saw this:

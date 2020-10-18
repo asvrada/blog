@@ -1,6 +1,7 @@
 ---
 date: '2018-08-07'
 title: 用一行指令快速完美下载YouTube视频
+category: note
 ---
 
 > 本文仅注重`youtude-dl`的实际使用。有关该工具的下载与安装，还请查阅他人的文章。

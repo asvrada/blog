@@ -1,6 +1,7 @@
 ---
 date: '2020-08-14'
 title: 工作中使用git的一点心得 - 2
+category: note
 ---
 
 > 上一章: [工作中使用git的一点心得 - 1](/work-with-git/)

@@ -1,6 +1,7 @@
 ---
 date: '2019-03-09'
 title: Java Datastructure Cheatsheet
+category: code
 ---
 
 # Table of Content:

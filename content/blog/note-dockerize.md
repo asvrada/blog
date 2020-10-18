@@ -1,6 +1,7 @@
 ---
 date: '2020-05-03'
 title: Some note on Dockerize React.js project
+category: note
 ---
 
 ## Why copy package.json first in Dockerfile

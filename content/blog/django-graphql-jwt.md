@@ -1,6 +1,7 @@
 ---
 date: '2020-07-29'
 title: Use JWT with Django RESTful and GraphQL
+category: code
 ---
 
 > Summary: I integrated JWT auth to my Django application that uses RESTful and GraphQL  
