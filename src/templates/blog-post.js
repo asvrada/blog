@@ -17,7 +17,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <header className="post-header">
           <span className="post-category">{postCategory}</span>
           <h1 className="post-title">{post.frontmatter.title}</h1>
-          <p className="post-date"><span>📅</span> {post.frontmatter.date}</p>
+          <p className="post-date"><span role="img" aria-label="calendar icon">📅</span> {post.frontmatter.date}</p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }}/>
       </article>

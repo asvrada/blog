@@ -5,16 +5,16 @@ import Layout from "../layout";
 import SEO from "../components/seo";
 import ListGroup from "react-bootstrap/ListGroup";
 
-// Home page
-const BlogIndex = ({ data }) => {
+// Shows all posts
+const Posts = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout>
-      <SEO title="Dashboard"/>
+      <SEO title="All Posts"/>
 
       <div>
-        <h1>Latest <Link className="link-view-all" to="/posts/">View All</Link></h1>
+        <h1>All Posts</h1>
         <ListGroup variant="flush">
           {posts.map(({ node }) => {
             const postSlug = node.fields.slug;
@@ -38,11 +38,11 @@ const BlogIndex = ({ data }) => {
   );
 };
 
-export default BlogIndex;
+export default Posts;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(limit: 5, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           fields {
