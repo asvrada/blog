@@ -14,9 +14,10 @@ const BlogPostTemplate = ({ data, location }) => {
       <SEO title={post.frontmatter.title} description={post.excerpt}/>
 
       <article className="markdown-body">
-        <header>
-          <p><span className="post-category">{postCategory}</span> {post.frontmatter.date}</p>
+        <header className="post-header">
+          <span className="post-category">{postCategory}</span>
           <h1 className="post-title">{post.frontmatter.title}</h1>
+          <p className="post-date"><span>📅</span> {post.frontmatter.date}</p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }}/>
       </article>
