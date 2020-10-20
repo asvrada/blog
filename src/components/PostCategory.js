@@ -17,8 +17,9 @@ const PostCategory = ({ className, category }) => {
 
   return (
     <StyledSpan backgroundColor={colorTable[categoryUpper]}
-                className={"post-category" + " " +
-                className}>{category}</StyledSpan>
+                className={"post-category" + " " + className}>
+      {category}
+    </StyledSpan>
   );
 };
 
