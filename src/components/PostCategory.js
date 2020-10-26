@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { SPACE } from "../utlis/constants";
 
 const StyledSpan = styled.span`
   background-color: ${props => props.backgroundColor}
@@ -17,7 +18,7 @@ const PostCategory = ({ className, category }) => {
 
   return (
     <StyledSpan backgroundColor={colorTable[categoryUpper]}
-                className={"post-category" + " " + className}>
+                className={"post-category" + SPACE + className}>
       {category}
     </StyledSpan>
   );

@@ -14,7 +14,7 @@ const BlogAbout = ({ data }) => {
       <h1>About Page</h1>
       <p>Under construction</p>
       <Iframe id="if-imagewall" className="p-0 m-0"
-              url="https://asvrada.github.io/vue-imagewall/"/>
+              url="https://asvrada.github.io/aboutme/"/>
     </Layout>
   );
 };

@@ -54,3 +54,23 @@
     margin-bottom: 0 !important;
   }
 }
+
+.selected-option {
+  background-color: rgb(255, 255, 255);
+  // x offset, y offset, blur size, spread size, color
+  box-shadow: 0 2px 8px -4px gray;
+}
+
+// style for mobile
+.segment-picker {
+  display: flex;
+}
+
+// for segmented picker
+// set max-width for bigger than sm
+@include media-breakpoint-up(sm) {
+  .segment-picker {
+    display: inline-flex;
+    max-width: 300px;
+  }
+}
