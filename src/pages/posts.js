@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 import Layout from "../layout";
 import SEO from "../components/seo";
 import PostList from "../components/PostList";
-import SegmentedPicker from "../components/SegmentedPicker";
+import SegmentedPicker from "react-segmented-picker";
 
 const InlineH1 = styled.h1`
   display: inline-block;
@@ -29,7 +29,8 @@ const Posts = ({ data }) => {
 
       <div>
         <InlineH1>All Posts</InlineH1>
-        <SegmentedPicker options={["All", "Code", "Note", "Life"]}
+        <SegmentedPicker className={"posts-category-picker"}
+                         options={["All", "Code", "Note", "Life"]}
                          selection={selection}
                          onSelectionChange={(newSelection) => {
                            setSelection(newSelection);
