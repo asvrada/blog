@@ -25,7 +25,7 @@
 }
 
 .index-post-category {
-  flex: 0 0 50px;
+  flex: 0 0 54px;
 }
 
 .link-view-all {
@@ -34,9 +34,10 @@
 
 .post-category {
   text-transform: uppercase;
-  padding: 5px;
   border-radius: 5px;
   text-align: center;
+  min-width: 54px;
+  display: inline-block;
 }
 
 .post-header {

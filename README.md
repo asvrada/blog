@@ -9,3 +9,4 @@ My personal blog
 2. Tag support
 3. Comment section
 4. Site-wide Search
+1. No icon for post pages
