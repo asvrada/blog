@@ -1,6 +1,6 @@
 ---
 date: '2020-10-11'
-title: Shortcuts for editing text in macOS
+title: Shortcuts for editing text on macOS
 category: note
 ---
 
