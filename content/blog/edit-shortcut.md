@@ -11,6 +11,7 @@ category: note
 
 ### Delete
 * Delete word to the left: ⌥-Delete ( Option-Delete )
+* Delete word to the right: Fn-⌥-Delete
 * Delete char to the right: Fn-Delete or ⌃-D (Ctrl-D)
 * Delete the rest of line: ⌃-K (Ctrl-K)
 
