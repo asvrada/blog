@@ -1,11 +1,8 @@
 ---
 date: '2020-10-11'
-title: 编辑常用快捷键
+title: Shortcuts for editing text in macOS
 category: note
 ---
-
-> 标题中的"编辑"是动词  
-> 本文章仅适用于 macOS
 
 ## Plain Text
 
