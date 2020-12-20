@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "jeff-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "A Gatsby.js powered personal blog site",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -28,6 +27,7 @@
     "node-sass": "^4.13.1",
     "prismjs": "^1.19.0",
     "prop-types": "^15.7.2",
+    "query-string": "^6.13.7",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.12.0",

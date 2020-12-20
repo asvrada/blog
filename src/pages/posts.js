@@ -1,11 +1,26 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { graphql } from "gatsby";
+import * as queryString from 'query-string';
+import SegmentedPicker from "react-segmented-picker";
 
 import Layout from "../layout";
 import SEO from "../components/seo";
 import PostList from "../components/PostList";
-import SegmentedPicker from "react-segmented-picker";
+
+const INVERSE_SELECTION_TO_TYPE = {
+  0: 'all',
+  1: 'code',
+  2: 'note',
+  3: 'life'
+}
+
+const SELECTION_TO_TYPE = {
+  'all': 0,
+  'code': 1,
+  'note': 2,
+  'life': 3
+}
 
 const InlineH1 = styled.h1`
   display: inline-block;
@@ -13,8 +28,10 @@ const InlineH1 = styled.h1`
 `;
 
 // Shows all posts
-const Posts = ({ data }) => {
-  const [selection, setSelection] = useState(0);
+const Posts = ({ data, location, navigate }) => {
+  const { filter } = queryString.parse(location.search)
+  const initialSelection = SELECTION_TO_TYPE[filter] || 0;
+  const [selection, setSelection] = useState(initialSelection);
 
   const postsAll = data.allPosts.edges;
   const postsCode = data.categoryCode.edges;
@@ -33,6 +50,7 @@ const Posts = ({ data }) => {
                          options={["All", "Code", "Note", "Life"]}
                          selection={selection}
                          onSelectionChange={(newSelection) => {
+                           navigate(`/posts/?filter=${INVERSE_SELECTION_TO_TYPE[newSelection]}`);
                            setSelection(newSelection);
                          }}
         />
