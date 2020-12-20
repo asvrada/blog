@@ -50,7 +50,7 @@ const Posts = ({ data, location, navigate }) => {
                          options={["All", "Code", "Note", "Life"]}
                          selection={selection}
                          onSelectionChange={(newSelection) => {
-                           navigate(`/posts/?filter=${INVERSE_SELECTION_TO_TYPE[newSelection]}`);
+                           navigate(`posts/?filter=${INVERSE_SELECTION_TO_TYPE[newSelection]}`);
                            setSelection(newSelection);
                          }}
         />
