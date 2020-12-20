@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { graphql } from "gatsby";
-import * as queryString from 'query-string';
+import { graphql, withPrefix } from "gatsby";
+import * as queryString from "query-string";
 import SegmentedPicker from "react-segmented-picker";
 
 import Layout from "../layout";
@@ -9,27 +9,27 @@ import SEO from "../components/seo";
 import PostList from "../components/PostList";
 
 const INVERSE_SELECTION_TO_TYPE = {
-  0: 'all',
-  1: 'code',
-  2: 'note',
-  3: 'life'
-}
+  0: "all",
+  1: "code",
+  2: "note",
+  3: "life"
+};
 
 const SELECTION_TO_TYPE = {
-  'all': 0,
-  'code': 1,
-  'note': 2,
-  'life': 3
-}
+  "all": 0,
+  "code": 1,
+  "note": 2,
+  "life": 3
+};
 
 const InlineH1 = styled.h1`
-  display: inline-block;
-  margin-right: 0.5em;
+    display: inline-block;
+    margin-right: 0.5em;
 `;
 
 // Shows all posts
 const Posts = ({ data, location, navigate }) => {
-  const { filter } = queryString.parse(location.search)
+  const { filter } = queryString.parse(location.search);
   const initialSelection = SELECTION_TO_TYPE[filter] || 0;
   const [selection, setSelection] = useState(initialSelection);
 
@@ -50,8 +50,9 @@ const Posts = ({ data, location, navigate }) => {
                          options={["All", "Code", "Note", "Life"]}
                          selection={selection}
                          onSelectionChange={(newSelection) => {
-                           // todo: fix for dev and prod
-                           navigate(`/blog/posts/?filter=${INVERSE_SELECTION_TO_TYPE[newSelection]}`);
+                           navigate(withPrefix(
+                             `/posts/?filter=${INVERSE_SELECTION_TO_TYPE[newSelection]}`)
+                           );
                            setSelection(newSelection);
                          }}
         />
