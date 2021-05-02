@@ -13,7 +13,8 @@ const PostCategory = ({ className, category }) => {
   const colorTable = {
     "CODE": "#7ed8e8",
     "NOTE": "#ffe300",
-    "LIFE": "#57e357"
+    "LIFE": "#57e357",
+    "LEETCODE": "#7ed8e8"
   };
 
   return (

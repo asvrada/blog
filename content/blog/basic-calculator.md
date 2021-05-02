@@ -1,7 +1,7 @@
 ---
 date: '2020-02-27'
 title: Infix to Postfix, a general approach to Basic Calculator problem set
-category: code
+category: leetcode 
 ---
 
 

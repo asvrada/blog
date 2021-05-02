@@ -12,14 +12,16 @@ const INVERSE_SELECTION_TO_TYPE = {
   0: "all",
   1: "code",
   2: "note",
-  3: "life"
+  3: "life",
+  4: "leetcode"
 };
 
 const SELECTION_TO_TYPE = {
   "all": 0,
   "code": 1,
   "note": 2,
-  "life": 3
+  "life": 3,
+  "leetcode": 4
 };
 
 const InlineH1 = styled.h1`
@@ -37,8 +39,9 @@ const Posts = ({ data, location, navigate }) => {
   const postsCode = data.categoryCode.edges;
   const postsNote = data.categoryNote.edges;
   const postsLife = data.categoryLife.edges;
+  const postsLeetCode = data.categoryLeetCode.edges;
 
-  const selectedPosts = [postsAll, postsCode, postsNote, postsLife];
+  const selectedPosts = [postsAll, postsCode, postsNote, postsLife, postsLeetCode];
 
   return (
     <Layout>
@@ -47,7 +50,7 @@ const Posts = ({ data, location, navigate }) => {
       <div>
         <InlineH1>All Posts</InlineH1>
         <SegmentedPicker className={"posts-category-picker"}
-                         options={["All", "Code", "Note", "Life"]}
+                         options={["All", "Code", "Note", "Life", "LeetCode"]}
                          selection={selection}
                          onSelectionChange={(newSelection) => {
                            navigate(withPrefix(
@@ -111,6 +114,21 @@ export const pageQuery = graphql`
       } 
     },
     categoryLife: allMarkdownRemark(filter: {frontmatter: {category: {eq: "life"}}},
+                                    sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMM DD, YYYY")
+            title,
+            category
+          }
+        }
+      } 
+    },
+    categoryLeetCode: allMarkdownRemark(filter: {frontmatter: {category: {eq: "leetcode"}}},
                                     sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
