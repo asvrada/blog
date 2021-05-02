@@ -9,7 +9,38 @@ module.exports = {
     },
     theme: {
       avatar: `assets/img/triangle.svg`
-    }
+    },
+    postCategory: [
+      {
+        id: 0,
+        name: "all",
+        text: "All",
+        color: ""
+      },
+      {
+        id: 1,
+        name: "code",
+        text: "Code",
+        color: "#7ed8e8"
+      },
+      {
+        id: 2,
+        name: "note",
+        text: "Note",
+        color: "#ffe300"
+      },
+      {
+        id: 3,
+        name: "life",
+        text: "Life",
+        color: "#57e357"
+      },
+      {
+        id: 4,
+        name: "leetcode",
+        text: "LeetCode",
+        color: "#7ed8e8"
+      }]
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -49,8 +80,8 @@ module.exports = {
               prompt: {
                 user: "jeff",
                 host: "localhost",
-                global: false,
-              },
+                global: false
+              }
             }
           },
           `gatsby-remark-copy-linked-files`,
@@ -60,6 +91,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-helmet`
   ]
 };

@@ -8,32 +8,39 @@ import Layout from "../layout";
 import SEO from "../components/seo";
 import PostList from "../components/PostList";
 
-const INVERSE_SELECTION_TO_TYPE = {
-  0: "all",
-  1: "code",
-  2: "note",
-  3: "life",
-  4: "leetcode"
-};
+function buildSelectionToType(postCategory) {
+  let INVERSE_SELECTION_TO_TYPE = {};
+  let SELECTION_TO_TYPE = {};
+  let TEXTS = [];
 
-const SELECTION_TO_TYPE = {
-  "all": 0,
-  "code": 1,
-  "note": 2,
-  "life": 3,
-  "leetcode": 4
-};
+  for (let i = 0; i < postCategory.length; i++) {
+    const category = postCategory[i];
+    INVERSE_SELECTION_TO_TYPE[category.id] = category.name;
+    SELECTION_TO_TYPE[category.name] = category.id;
+    TEXTS.push(category.text);
+  }
+
+  return { INVERSE_SELECTION_TO_TYPE, SELECTION_TO_TYPE, TEXTS };
+}
 
 const InlineH1 = styled.h1`
-    display: inline-block;
-    margin-right: 0.5em;
+  display: inline-block;
+  margin-right: 0.5em;
 `;
 
 // Shows all posts
 const Posts = ({ data, location, navigate }) => {
-  const { filter } = queryString.parse(location.search);
-  const initialSelection = SELECTION_TO_TYPE[filter] || 0;
-  const [selection, setSelection] = useState(initialSelection);
+  const {
+    INVERSE_SELECTION_TO_TYPE,
+    SELECTION_TO_TYPE,
+    TEXTS
+  } = buildSelectionToType(
+    data.categories.siteMetadata.postCategory);
+
+  const [selection, setSelection] = useState(() => {
+    const { filter } = queryString.parse(location.search);
+    return SELECTION_TO_TYPE[filter] || 0;
+  });
 
   const postsAll = data.allPosts.edges;
   const postsCode = data.categoryCode.edges;
@@ -41,7 +48,12 @@ const Posts = ({ data, location, navigate }) => {
   const postsLife = data.categoryLife.edges;
   const postsLeetCode = data.categoryLeetCode.edges;
 
-  const selectedPosts = [postsAll, postsCode, postsNote, postsLife, postsLeetCode];
+  const selectedPosts = [
+    postsAll,
+    postsCode,
+    postsNote,
+    postsLife,
+    postsLeetCode];
 
   return (
     <Layout>
@@ -50,7 +62,7 @@ const Posts = ({ data, location, navigate }) => {
       <div>
         <InlineH1>All Posts</InlineH1>
         <SegmentedPicker className={"posts-category-picker"}
-                         options={["All", "Code", "Note", "Life", "LeetCode"]}
+                         options={TEXTS}
                          selection={selection}
                          onSelectionChange={(newSelection) => {
                            navigate(withPrefix(
@@ -69,6 +81,15 @@ export default Posts;
 
 export const pageQuery = graphql`
   query {
+    categories: site {
+      siteMetadata {
+        postCategory {
+          id,
+          name,
+          text
+        }
+      }
+    },
     allPosts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
